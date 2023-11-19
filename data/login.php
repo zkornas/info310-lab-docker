@@ -20,7 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        $_SESSION["username"] = $username;
+        $row = $result->fetch_assoc();
+        $instructorName = $row["instructor_name"];
+        $_SESSION["instructor_name"] = $instructorName;
 
         header("Location: instructor.php");
         exit();

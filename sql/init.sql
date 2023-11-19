@@ -12,7 +12,8 @@ CREATE TABLE announcements (
 
 CREATE TABLE login_info (
     username VARCHAR(255) NOT NULL,
-    pass VARCHAR(255) NOT NULL
+    pass VARCHAR(255) NOT NULL,
+    instructor_name VARCHAR(255) NOT NULL
 );
 
 INSERT INTO gradebook (first_name, last_name, student_id, grade) VALUES
@@ -31,6 +32,6 @@ INSERT INTO announcements (instructor, message_text) VALUES
 ('Reifers', 'This is a test announcement'),
 ('Reifers', 'This is another test');
 
-INSERT INTO login_info (username, pass) VALUES
-('areifers@uw.edu', 'myPassword4!'),
-('zkornas@uw.edu', 'secretPa55');
+INSERT INTO login_info (username, pass, instructor_name) VALUES
+('areifers@uw.edu', 'myPassword4!', 'Andrew Reifers'),
+('zkornas@uw.edu', 'secretPa55', 'Zach Kornas');
