@@ -8,8 +8,13 @@
             <h1>Welcome to INFO 310!</h1>
             <p>
                 Instructor Portal
-                <button onclick="window.location.href = '/admin/index.html';">Log in</button>
             </p>
+            <form action="login.php" method="POST">
+                <input type="text" id="username" name="username" placeholder="E-mail..." required> <br>
+                <input type="password" id="password" name="password" placeholder="Password..." required> <br>
+                <br>
+                <input type="submit" value="Log in">
+            </form>
             <br>
             <br>
             <p>You can view your grade by entering your Student ID below</p>

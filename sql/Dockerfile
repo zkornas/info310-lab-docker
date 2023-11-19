@@ -1,7 +1,7 @@
 FROM mysql:latest
 
 ENV MYSQL_ROOT_PASSWORD=password \
-    MYSQL_DATABASE=gradebook_db \
+    MYSQL_DATABASE=info310_db \
     MYSQL_USER=admin \
     MYSQL_PASSWORD=password
 

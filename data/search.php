@@ -1,7 +1,7 @@
 <?php
 $studentId = $_GET['studentId'];
 
-$conn = new mysqli('sql', 'admin', 'password', 'gradebook_db');
+$conn = new mysqli('sql', 'admin', 'password', 'info310_db');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
