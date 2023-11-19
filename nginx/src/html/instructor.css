@@ -26,17 +26,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: larger;
+    color: white;
     max-height: 80%;
     overflow-y: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: white;
-}
 
-p {
-    color: black;
-}
 
 .results {
     border-radius: 5px;

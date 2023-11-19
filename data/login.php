@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "<script>
                 alert('Invalid username or password.');
-                window.location.href='index.html';
+                window.location.href='index.php';
               </script>";
         exit();
     }

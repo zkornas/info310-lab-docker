@@ -52,7 +52,7 @@ $conn->close();
         </div>
         <br>
         <br>
-        <button onclick="window.location.href = 'index.html';">Home</button>
+        <button onclick="window.location.href = 'index.php';">Home</button>
         <br>
     </div>
 </body>
