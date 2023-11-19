@@ -1,8 +1,6 @@
 <?php
 $studentId = $_GET['studentId'];
 
-
-
 $conn = new mysqli('sql', 'admin', 'password', 'gradebook_db');
 
 if ($conn->connect_error) {
@@ -10,31 +8,54 @@ if ($conn->connect_error) {
 }
 
 $sql = "SELECT * FROM gradebook WHERE student_id = '$studentId'";
-
-/** 
-$stmt = $conn->prepare("SELECT * FROM gradebook WHERE student_id = ?");
-$stmt->bind_param("s", $studentId); // "s" indicates a string parameter
-
-// Execute the query
-$stmt->execute();
-
-// Get the results
-$result = $stmt->get_result();
-*/
-
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+    $resultsHTML = "<div class='search-results'>";
     while ($row = $result->fetch_assoc()) {
-        echo "ID: " . $row["id"] . "<br>";
-        echo "First Name: " . $row["first_name"] . "<br>";
-        echo "Last Name: " . $row["last_name"] . "<br>";
-        echo "Student ID: " . $row["student_id"] . "<br>";
-        echo "Grade: " . $row["grade"] . "<br>";
+        $resultsHTML .= "<div class='result'>";
+        $resultsHTML .= "<p>ID: " . $row["id"] . "</p>";
+        $resultsHTML .= "<p>First Name: " . $row["first_name"] . "</p>";
+        $resultsHTML .= "<p>Last Name: " . $row["last_name"] . "</p>";
+        $resultsHTML .= "<p>Student ID: " . $row["student_id"] . "</p>";
+        $resultsHTML .= "<p>Grade: " . $row["grade"] . "</p>";
+        $resultsHTML .= "</div>";
     }
+    $resultsHTML .= "</div>";
 } else {
-    echo "No results found for Student ID: $studentId";
+    $resultsHTML = "<p>No results found for Student ID: $studentId</p>";
 }
 
 $conn->close();
 ?>
+
+<html>
+<head>
+    <title>INFO 310</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <div class="hero-text">
+        <h1>Search Results</h1>
+        <br>
+        <br>
+        <h4>You can view your grade by entering your Student ID below</h4>
+        <form action="search.php" method="GET">
+            <input type="text" id="studentId" name="studentId" required>
+            <input type="submit" value="Search">
+        </form>
+        <div class="results">
+            <br>
+            <br>
+            <?php echo $resultsHTML; ?> <!-- Display the results section conditionally -->
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <h6>Click below to submit feedback!</h6>
+        <button onclick="window.location.href = 'feedback.html';">Submit Feedback</button>
+        <br>
+    </div>
+</body>
+</html>

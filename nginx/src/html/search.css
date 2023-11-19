@@ -20,17 +20,28 @@ body {
 }
 
 .hero-text {
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: larger;
     color: white;
-    max-height: 80%; /* Set a maximum height to allow scrolling */
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    max-height: 80%;
+    overflow-y: auto;
 }
 
-h1, h2, p {
+h1, h2, h4, h6 {
     color: white;
+}
+
+p {
+    color: black;
+    padding-left: 10px;
+
+}
+
+.results {
+    border-radius: 5px;
+    background-color: #f2f2f2;
 }
