@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>INFO 310</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Welcome to INFO 310!</h1>
+                <p>
+                    Instructor Portal
+                    <button onclick="window.location.href = '/admin/index.html';">Log in</button>
+                </p>
+                <br>
+                <br>
+                <p>You can view your grade by entering your Student ID below</p>
+                <form action="search.php" method="GET">
+                    <input type="text" id="studentId" name="studentId" required>
+                    <input type="submit" value="Search">
+                </form>
+                <br>
+                <br>
+                <p>Click below to submit feedback!</p>
+                <button onclick="window.location.href = 'feedback.html';">Submit Feedback</button>
+            </div>
+        </div>
+    </body>
+</html>
