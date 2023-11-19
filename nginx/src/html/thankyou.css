@@ -16,36 +16,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     position: relative;
 }
 
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 20px;
-}
-
-.flex-box {
-    flex: 1;
-}
-
-.flex-box:first-child {
-    margin: 0 auto;
+.hero-text {
     text-align: center;
-    flex-grow: 2;
-    font-size: larger;
     color: white;
-    margin-left: 10%;
-}
-
-.flex-box:last-child {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: left;
-    border-radius: 10px;
-    margin-right: 10%;
-    margin-left: 10%;
+    padding-top: 20%;
 }
