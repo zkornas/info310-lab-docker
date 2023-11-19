@@ -14,7 +14,6 @@ if ($result->num_rows > 0) {
     $resultsHTML = "<div class='search-results'>";
     while ($row = $result->fetch_assoc()) {
         $resultsHTML .= "<div class='result'>";
-        $resultsHTML .= "<p>ID: " . $row["id"] . "</p>";
         $resultsHTML .= "<p>First Name: " . $row["first_name"] . "</p>";
         $resultsHTML .= "<p>Last Name: " . $row["last_name"] . "</p>";
         $resultsHTML .= "<p>Student ID: " . $row["student_id"] . "</p>";
@@ -47,14 +46,13 @@ $conn->close();
         <div class="results">
             <br>
             <br>
-            <?php echo $resultsHTML; ?> <!-- Display the results section conditionally -->
+            <?php echo $resultsHTML; ?>
             <br>
             <br>
         </div>
         <br>
         <br>
-        <h6>Click below to submit feedback!</h6>
-        <button onclick="window.location.href = 'feedback.html';">Submit Feedback</button>
+        <button onclick="window.location.href = 'index.html';">Home</button>
         <br>
     </div>
 </body>

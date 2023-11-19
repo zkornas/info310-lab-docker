@@ -27,8 +27,8 @@ body {
     transform: translate(-50%, -50%);
     font-size: larger;
     color: white;
-    max-height: 80%; /* Set a maximum height to allow scrolling */
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    max-height: 80%;
+    overflow-y: auto;
 }
 
 h1, h2, p {
