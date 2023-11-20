@@ -29,8 +29,8 @@ INSERT INTO gradebook (first_name, last_name, student_id, grade) VALUES
 ('Henry', 'Clark', 4567890, 3.0);
 
 INSERT INTO announcements (instructor, message_text) VALUES
-('Andrew Reifers', 'OFFICE HOURS CANCELLED<br>Happy Thanksgiving!'),
-('Andrew Reifers', 'MIDTERM GRADES POSTED<br>See your updated GPA using your Student ID number!');
+('Andrew Reifers', 'MIDTERM GRADES POSTED<br>See your updated GPA using your Student ID number!'),
+('Andrew Reifers', 'Interested in renting a treadmil? Click <a href="https://www.youtube.com/watch?v=Jy0L7vmlz_g" target="_blank">here</a> to learn more!');
 
 INSERT INTO login_info (username, pass, instructor_name) VALUES
 ('areifers@uw.edu', 'myPassword4!', 'Andrew Reifers'),
