@@ -71,7 +71,7 @@ UPDATE <gradebook> SET <column_name> = <value> WHERE <other_column_name> = <othe
 
 --- 
 
-## Give yourself instructor level privledges and make an announcement **as Bob** letting everyone know you hacked the INFO 310 website.
+## 4. Give yourself instructor level privledges and make an announcement **as Bob** letting everyone know you hacked the INFO 310 website.
 
 1. Find the column names for the login credential table the same way we did in the first challenge:
 
