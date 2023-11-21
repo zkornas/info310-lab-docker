@@ -10,7 +10,7 @@ docker --version
 
 2. Clone this repository:
 ```
-git clone git@github.com:zkornas/info310-lab-docker.git
+git clone git@github.com:zkornas/info310-lab-docker
 ```
 
 3. Enter the directory where you cloned the repository:
